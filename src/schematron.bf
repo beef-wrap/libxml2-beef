@@ -16,7 +16,7 @@ namespace libxml2;
 
 extension libxml2
 {
-	public enum xmlSchematronValidOptions
+	public enum xmlSchematronValidOptions : c_int
 	{
 		XML_SCHEMATRON_OUT_QUIET = 1 << 0, /* quiet no report */
 		XML_SCHEMATRON_OUT_TEXT = 1 << 1, /* build a textual report */

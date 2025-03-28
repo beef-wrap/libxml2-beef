@@ -31,7 +31,7 @@ extension libxml2
 	 *
 	 * enumeration of options that can be passed down to xmlModuleOpen()
 	 */
-	public enum xmlModuleOption
+	public enum xmlModuleOption : c_int
 	{
 		XML_MODULE_LAZY = 1, /* lazy binding */
 		XML_MODULE_LOCAL = 2 /* local binding */

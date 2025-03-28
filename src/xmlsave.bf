@@ -22,7 +22,7 @@ extension libxml2
 	* This is the set of XML save options that can be passed down
 	* to the xmlSaveToFd() and similar calls.
 	*/
-	public enum xmlSaveOption
+	public enum xmlSaveOption : c_int
 	{
 		XML_SAVE_FORMAT = 1 << 0, /* format save output */
 		XML_SAVE_NO_DECL = 1 << 1, /* drop the xml declaration */

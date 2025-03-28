@@ -53,7 +53,7 @@ extension libxml2
 	 *
 	 * List of possible Relax NG validation errors
 	 */
-	public enum xmlRelaxNGValidErr
+	public enum xmlRelaxNGValidErr : c_int
 	{
 		XML_RELAXNG_OK = 0,
 		XML_RELAXNG_ERR_MEMORY,
@@ -102,7 +102,7 @@ extension libxml2
 	 *
 	 * List of possible Relax NG Parser flags
 	 */
-	public enum xmlRelaxNGParserFlag
+	public enum xmlRelaxNGParserFlag : c_int
 	{
 		XML_RELAXNGP_NONE = 0,
 		XML_RELAXNGP_FREE_DOC = 1,

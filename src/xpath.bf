@@ -33,7 +33,7 @@ extension libxml2
 	* The set of XPath error codes.
 	*/
 
-	public enum xmlXPathError
+	public enum xmlXPathError : c_int
 	{
 		XPATH_EXPRESSION_OK = 0,
 		XPATH_NUMBER_ERROR,
@@ -62,7 +62,7 @@ extension libxml2
 		XPATH_FORBID_VARIABLE_ERROR,
 		XPATH_OP_LIMIT_EXCEEDED,
 		XPATH_RECURSION_LIMIT_EXCEEDED
-	};
+	}
 
 	/*
 	* A node-set (an unordered collection of nodes without duplicates).
@@ -76,7 +76,7 @@ extension libxml2
 		c_int nodeMax; /* size of the array as allocated */
 		xmlNodePtr* nodeTab; /* array of nodes in no particular order */
 		/* @@ with_ns to check whether namespace nodes should be looked at @@ */
-	};
+	}
 
 	/*
 	* An expression is evaluated to yield an object, which
@@ -89,7 +89,7 @@ extension libxml2
 	* @@ XPointer will add more types !
 	*/
 
-	public enum xmlXPathObjectType
+	public enum xmlXPathObjectType : c_int
 	{
 		XPATH_UNDEFINED = 0,
 		XPATH_NODESET = 1,
@@ -98,7 +98,7 @@ extension libxml2
 		XPATH_STRING = 4,
 		XPATH_USERS = 8,
 		XPATH_XSLT_TREE = 9 /* An XSLT value tree, non modifiable */
-	};
+	}
 
 	/** DOC_DISABLE */
 	const c_int XPATH_POINT = 5;
@@ -120,7 +120,7 @@ extension libxml2
 		c_int index;
 		void* user2;
 		c_int index2;
-	};
+	}
 
 	/**
 	* xmlXPathConvertFunc:
@@ -144,7 +144,7 @@ extension libxml2
 	{
 		xmlChar* name; /* the type name */
 		xmlXPathConvertFunc func; /* the conversion function */
-	};
+	}
 
 	/*
 	* Extra variable: a name and a value.
@@ -156,7 +156,7 @@ extension libxml2
 	{
 		xmlChar       * name; /* the variable name */
 		xmlXPathObjectPtr value; /* the value */
-	};
+	}
 
 	/**
 	* xmlXPathEvalFunc:
@@ -178,7 +178,7 @@ extension libxml2
 	{
 		xmlChar* name; /* the function name */
 		xmlXPathEvalFunc func; /* the evaluation function */
-	};
+	}
 
 	/**
 	* xmlXPathAxisFunc:
@@ -204,7 +204,7 @@ extension libxml2
 	{
 		xmlChar* name; /* the axis name */
 		xmlXPathAxisFunc func; /* the search function */
-	};
+	}
 
 	/**
 	* xmlXPathFunction:
@@ -357,7 +357,7 @@ extension libxml2
 		c_ulong opLimit;
 		c_ulong opCount;
 		c_int depth;
-	};
+	}
 
 	/*
 	* The structure of a compiled expression form is not public.
@@ -390,7 +390,7 @@ extension libxml2
 		xmlNodePtr         ancestor; /* used for walking preceding axis */
 
 		c_int              valueFrame; /* always zero for compatibility */
-	};
+	}
 
 	/************************************************************************
 	*									*

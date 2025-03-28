@@ -26,7 +26,7 @@ namespace libxml2;
 
 extension libxml2
 {
-	public enum xmlCharEncError
+	public enum xmlCharEncError : c_int
 	{
 		XML_ENC_ERR_SUCCESS     =  0,
 		XML_ENC_ERR_INTERNAL    = -1,
@@ -40,7 +40,7 @@ extension libxml2
 	*
 	* Predefined values for some standard encodings.
 	*/
-	public enum xmlCharEncoding
+	public enum xmlCharEncoding : c_int
 	{
 		XML_CHAR_ENCODING_ERROR =   -1, /* No char encoding detected */
 		XML_CHAR_ENCODING_NONE =	0, /* No char encoding detected */

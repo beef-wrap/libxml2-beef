@@ -39,20 +39,20 @@ extension libxml2
 	/*
 	 * The API is voluntarily limited to general cataloging.
 	 */
-	public enum xmlCatalogPrefer
+	public enum xmlCatalogPrefer : c_int
 	{
 		XML_CATA_PREFER_NONE = 0,
 		XML_CATA_PREFER_PUBLIC = 1,
 		XML_CATA_PREFER_SYSTEM
-	};
+	}
 
-	public enum xmlCatalogAllow
+	public enum xmlCatalogAllow : c_int
 	{
 		XML_CATA_ALLOW_NONE = 0,
 		XML_CATA_ALLOW_GLOBAL = 1,
 		XML_CATA_ALLOW_DOCUMENT = 2,
 		XML_CATA_ALLOW_ALL = 3
-	};
+	}
 
 	public struct xmlCatalog;
 

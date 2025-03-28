@@ -18,7 +18,7 @@ extension libxml2
 	/*
 	* The different valid entity types.
 	*/
-	public enum xmlEntityType
+	public enum xmlEntityType : c_int
 	{
 		XML_INTERNAL_GENERAL_ENTITY = 1,
 		XML_EXTERNAL_GENERAL_PARSED_ENTITY = 2,

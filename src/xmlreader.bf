@@ -21,7 +21,7 @@ extension libxml2
 	 * How severe an error callback is when the per-reader error callback API
 	 * is used.
 	 */
-	public enum xmlParserSeverities
+	public enum xmlParserSeverities : c_int
 	{
 		XML_PARSER_SEVERITY_VALIDITY_WARNING = 1,
 		XML_PARSER_SEVERITY_VALIDITY_ERROR = 2,
@@ -36,7 +36,7 @@ extension libxml2
 	 *
 	 * Internal state values for the reader.
 	 */
-	public enum xmlTextReaderMode
+	public enum xmlTextReaderMode : c_int
 	{
 		XML_TEXTREADER_MODE_INITIAL = 0,
 		XML_TEXTREADER_MODE_INTERACTIVE = 1,
@@ -53,7 +53,7 @@ extension libxml2
 	 * is better to use xmlParserOption and the xmlReaderNewxxx and
 	 * xmlReaderForxxx APIs now.
 	 */
-	public enum xmlParserProperties
+	public enum xmlParserProperties : c_int
 	{
 		XML_PARSER_LOADDTD = 1,
 		XML_PARSER_DEFAULTATTRS = 2,
@@ -66,7 +66,7 @@ extension libxml2
 	 *
 	 * Predefined constants for the different types of nodes.
 	 */
-	public enum xmlReaderTypes
+	public enum xmlReaderTypes : c_int
 	{
 		XML_READER_TYPE_NONE = 0,
 		XML_READER_TYPE_ELEMENT = 1,

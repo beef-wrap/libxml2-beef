@@ -17,7 +17,7 @@ namespace libxml2;
 
 extension libxml2
 {
-	public enum xmlSchemaWhitespaceValueType
+	public enum xmlSchemaWhitespaceValueType : c_int
 	{
 		XML_SCHEMA_WHITESPACE_UNKNOWN = 0,
 		XML_SCHEMA_WHITESPACE_PRESERVE = 1,

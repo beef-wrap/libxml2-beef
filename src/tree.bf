@@ -57,7 +57,7 @@ extension libxml2
 	 * A buffer allocation scheme can be defined to either match exactly the
 	 * need or double it's allocated size each time it is found too small.
 	 */
-	public enum xmlBufferAllocationScheme
+	public enum xmlBufferAllocationScheme : c_int
 	{
 		XML_BUFFER_ALLOC_DOUBLEIT, /* double each time one need to grow */
 		XML_BUFFER_ALLOC_EXACT, /* grow only to the minimal size */
@@ -148,7 +148,7 @@ extension libxml2
 	 * Actually this had diverged a bit, and now XML_DOCUMENT_TYPE_NODE should
 	 * be deprecated to use an XML_DTD_NODE.
 	 */
-	public enum xmlElementType
+	public enum xmlElementType : c_int
 	{
 		XML_ELEMENT_NODE = 1,
 		XML_ATTRIBUTE_NODE = 2,
@@ -171,7 +171,7 @@ extension libxml2
 		XML_XINCLUDE_START = 19,
 		XML_XINCLUDE_END = 20
 		/* XML_DOCB_DOCUMENT_NODE=	21 */ /* removed */
-	};
+	}
 
 	/** DOC_DISABLE */
 	/* For backward compatibility */
@@ -198,7 +198,7 @@ extension libxml2
 	 *
 	 * A DTD Attribute type definition.
 	 */
-	public enum xmlAttributeType
+	public enum xmlAttributeType : c_int
 	{
 		XML_ATTRIBUTE_CDATA = 1,
 		XML_ATTRIBUTE_ID,
@@ -210,20 +210,20 @@ extension libxml2
 		XML_ATTRIBUTE_NMTOKENS,
 		XML_ATTRIBUTE_ENUMERATION,
 		XML_ATTRIBUTE_NOTATION
-	};
+	}
 
 	/**
 	 * xmlAttributeDefault:
 	 *
 	 * A DTD Attribute default definition.
 	 */
-	public enum xmlAttributeDefault
+	public enum xmlAttributeDefault : c_int
 	{
 		XML_ATTRIBUTE_NONE = 1,
 		XML_ATTRIBUTE_REQUIRED,
 		XML_ATTRIBUTE_IMPLIED,
 		XML_ATTRIBUTE_FIXED
-	};
+	}
 
 	/**
 	 * xmlEnumeration:
@@ -273,26 +273,26 @@ extension libxml2
 	 *
 	 * Possible definitions of element content types.
 	 */
-	public enum xmlElementContentType
+	public enum xmlElementContentType : c_int
 	{
 		XML_ELEMENT_CONTENT_PCDATA = 1,
 		XML_ELEMENT_CONTENT_ELEMENT,
 		XML_ELEMENT_CONTENT_SEQ,
 		XML_ELEMENT_CONTENT_OR
-	};
+	}
 
 	/**
 	 * xmlElementContentOccur:
 	 *
 	 * Possible definitions of element content occurrences.
 	 */
-	public enum xmlElementContentOccur
+	public enum xmlElementContentOccur : c_int
 	{
 		XML_ELEMENT_CONTENT_ONCE = 1,
 		XML_ELEMENT_CONTENT_OPT,
 		XML_ELEMENT_CONTENT_MULT,
 		XML_ELEMENT_CONTENT_PLUS
-	};
+	}
 
 	/**
 	 * xmlElementContent:
@@ -321,14 +321,14 @@ extension libxml2
 	 * The different possibilities for an element content type.
 	 */
 
-	public enum xmlElementTypeVal
+	public enum xmlElementTypeVal : c_int
 	{
 		XML_ELEMENT_TYPE_UNDEFINED = 0,
 		XML_ELEMENT_TYPE_EMPTY = 1,
 		XML_ELEMENT_TYPE_ANY,
 		XML_ELEMENT_TYPE_MIXED,
 		XML_ELEMENT_TYPE_ELEMENT
-	};
+	}
 
 	/**
 	 * xmlElement:
@@ -540,7 +540,7 @@ extension libxml2
 	 * Set of properties of the document as found by the parser
 	 * Some of them are linked to similarly named xmlParserOption
 	 */
-	public enum xmlDocProperties
+	public enum xmlDocProperties : c_int
 	{
 		XML_DOC_WELLFORMED = 1 << 0, /* document is XML well formed */
 		XML_DOC_NSVALID = 1 << 1, /* document is Namespace valid */
@@ -551,7 +551,7 @@ extension libxml2
 											   and not by parsing an instance */
 		XML_DOC_INTERNAL = 1 << 6, /* built for internal processing */
 		XML_DOC_HTML = 1 << 7 /* parsed or built HTML document */
-	};
+	}
 
 	/**
 	 * xmlDoc:

@@ -21,7 +21,7 @@ extension libxml2
 	/**
 	* This error codes are obsolete; not used any more.
 	*/
-	public enum xmlSchemaValidError
+	public enum xmlSchemaValidError : c_int
 	{
 		XML_SCHEMAS_ERR_OK		= 0,
 		XML_SCHEMAS_ERR_NOROOT	= 1,
@@ -61,7 +61,7 @@ extension libxml2
 	*
 	* This is the set of XML Schema validation options.
 	*/
-	public enum xmlSchemaValidOption
+	public enum xmlSchemaValidOption : c_int
 	{
 		XML_SCHEMA_VAL_VC_I_CREATE			= 1 << 0
 		/* Default/fixed: create an attribute node

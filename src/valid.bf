@@ -83,7 +83,7 @@ extension libxml2
 		void                     *am;
 		void                  *state;
 	#endif
-	};
+	}
 
 	/*
 	* ALL notation declarations are stored in a table.

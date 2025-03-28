@@ -19,7 +19,7 @@ extension libxml2
 	 *
 	 * Indicates the level of an error
 	 */
-	public enum xmlErrorLevel
+	public enum xmlErrorLevel : c_int
 	{
 		XML_ERR_NONE = 0,
 		XML_ERR_WARNING = 1, /* A simple warning */
@@ -32,7 +32,7 @@ extension libxml2
 	 *
 	 * Indicates where an error may have come from
 	 */
-	public enum xmlErrorDomain
+	public enum xmlErrorDomain : c_int
 	{
 		XML_FROM_NONE = 0,
 		XML_FROM_PARSER, /* The XML parser */
@@ -97,7 +97,7 @@ extension libxml2
 	 *
 	 * This is an error that the XML (or HTML) parser can generate
 	 */
-	public enum xmlParserErrors
+	public enum xmlParserErrors : c_int
 	{
 		XML_ERR_OK = 0,
 		XML_ERR_INTERNAL_ERROR, /* 1 */

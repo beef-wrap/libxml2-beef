@@ -31,7 +31,7 @@ extension libxml2
 	typealias xlinkRole = xmlChar*;
 	typealias xlinkTitle = xmlChar*;
 
-	public enum xlinkType
+	public enum xlinkType : c_int
 	{
 		XLINK_TYPE_NONE = 0,
 		XLINK_TYPE_SIMPLE,
@@ -39,7 +39,7 @@ extension libxml2
 		XLINK_TYPE_EXTENDED_SET
 	}
 
-	public enum xlinkShow
+	public enum xlinkShow : c_int
 	{
 		XLINK_SHOW_NONE = 0,
 		XLINK_SHOW_NEW,
@@ -47,7 +47,7 @@ extension libxml2
 		XLINK_SHOW_REPLACE
 	}
 
-	public enum xlinkActuate
+	public enum xlinkActuate : c_int
 	{
 		XLINK_ACTUATE_NONE = 0,
 		XLINK_ACTUATE_AUTO,

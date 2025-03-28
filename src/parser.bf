@@ -26,7 +26,7 @@ extension libxml2
 	const c_int XML_STATUS_DTD_VALIDATION_FAILED    = 1 << 2;
 	const c_int XML_STATUS_CATASTROPHIC_ERROR       = 1 << 3;
 
-	public enum xmlResourceType
+	public enum xmlResourceType : c_int
 	{
 		XML_RESOURCE_UNKNOWN = 0,
 		XML_RESOURCE_MAIN_DOCUMENT,
@@ -132,7 +132,7 @@ extension libxml2
 	* The parser is now working also as a state based parser.
 	* The recursive one use the state info for entities processing.
 	*/
-	public enum xmlParserInputState
+	public enum xmlParserInputState : c_int
 	{
 		XML_PARSER_EOF = -1, /* nothing is to be parsed */
 		XML_PARSER_START = 0, /* nothing has been parsed */
@@ -167,7 +167,7 @@ extension libxml2
 	*
 	* A parser can operate in various modes
 	*/
-	public enum xmlParserMode
+	public enum xmlParserMode : c_int
 	{
 		XML_PARSE_UNKNOWN = 0,
 		XML_PARSE_DOM = 1,
@@ -1127,7 +1127,8 @@ extension libxml2
 	* This is the set of XML parser options that can be passed down
 	* to the xmlReadDoc() and similar calls.
 	*/
-	public enum xmlParserOption {
+	public enum xmlParserOption  : c_int
+	{
 		XML_PARSE_RECOVER	= 1<<0,	/* recover on errors */
 		XML_PARSE_NOENT	= 1<<1,	/* substitute entities */
 		XML_PARSE_DTDLOAD	= 1<<2,	/* load the external subset */
@@ -1217,7 +1218,8 @@ extension libxml2
 	* or disabled at compile-time.
 	* They used to be called XML_FEATURE_xxx but this clashed with Expat
 	*/
-	public enum xmlFeature {
+	public enum xmlFeature  : c_int
+	{
 		XML_WITH_THREAD = 1,
 		XML_WITH_TREE = 2,
 		XML_WITH_OUTPUT = 3,

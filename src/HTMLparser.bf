@@ -71,7 +71,7 @@ extension libxml2
 		c_uint value; /* the UNICODE value for the character */
 		char* name; /* The entity name */
 		char* desc; /* the description */
-	};
+	}
 
 #if LIBXML_SAX1_ENABLED
 
@@ -132,7 +132,8 @@ extension libxml2
 	 * This is the set of XML parser options that can be passed down
 	 * to the xmlReadDoc() and similar calls.
 	 */
-	public enum htmlParserOption {
+	public enum htmlParserOption  : c_int
+	{
 	    HTML_PARSE_RECOVER  = 1<<0, /* No effect */
 	    HTML_PARSE_HTML5    = 1<<1, /* HTML5 support */
 	    HTML_PARSE_NODEFDTD = 1<<2, /* do not default a doctype if not found */
@@ -165,7 +166,8 @@ extension libxml2
 	
 	/* deprecated content model
 	 */
-	public enum htmlStatus {
+	public enum htmlStatus  : c_int
+	{
 	  HTML_NA = 0 ,		/* something we don't check at all */
 	  HTML_INVALID = 0x1 ,
 	  HTML_DEPRECATED = 0x2 ,

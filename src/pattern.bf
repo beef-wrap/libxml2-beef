@@ -32,13 +32,13 @@ extension libxml2
 	* matching with this module
 	*
 	*/
-	public enum xmlPatternFlags
+	public enum xmlPatternFlags : c_int
 	{
 		XML_PATTERN_DEFAULT		= 0, /* simple pattern match */
 		XML_PATTERN_XPATH		= 1 << 0, /* standard XPath pattern */
 		XML_PATTERN_XSSEL		= 1 << 1, /* XPath subset for schema selector */
 		XML_PATTERN_XSFIELD		= 1 << 2 /* XPath subset for schema field */
-	};
+	}
 
 	[CLink] public static extern void xmlFreePattern(xmlPatternPtr comp);
 

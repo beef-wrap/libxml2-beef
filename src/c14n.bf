@@ -44,7 +44,7 @@ extension libxml2
 	* Predefined values for C14N modes
 	*
 	*/
-	public enum xmlC14NMode
+	public enum xmlC14NMode : c_int
 	{
 		XML_C14N_1_0            = 0, /* Original C14N 1.0 spec */
 		XML_C14N_EXCLUSIVE_1_0  = 1, /* Exclusive C14N 1.0 spec */

@@ -19,7 +19,7 @@ namespace libxml2;
 
 extension libxml2
 {
-	public enum xmlSchemaValType
+	public enum xmlSchemaValType : c_int
 	{
 		XML_SCHEMAS_UNKNOWN = 0,
 		XML_SCHEMAS_STRING = 1,
@@ -68,12 +68,12 @@ extension libxml2
 		XML_SCHEMAS_BASE64BINARY = 44,
 		XML_SCHEMAS_ANYTYPE = 45,
 		XML_SCHEMAS_ANYSIMPLETYPE = 46
-	};
+	}
 
 	/*
 	 * XML Schemas defines multiple type of types.
 	 */
-	public enum xmlSchemaTypeType
+	public enum xmlSchemaTypeType : c_int
 	{
 		XML_SCHEMA_TYPE_BASIC = 1, /* A built-in datatype */
 		XML_SCHEMA_TYPE_ANY,
@@ -115,9 +115,9 @@ extension libxml2
 		XML_SCHEMA_FACET_MINLENGTH,
 		XML_SCHEMA_EXTRA_QNAMEREF = 2000,
 		XML_SCHEMA_EXTRA_ATTR_USE_PROHIB
-	};
+	}
 
-	public enum xmlSchemaContentType
+	public enum xmlSchemaContentType : c_int
 	{
 		XML_SCHEMA_CONTENT_UNKNOWN = 0,
 		XML_SCHEMA_CONTENT_EMPTY = 1,
@@ -127,7 +127,7 @@ extension libxml2
 		XML_SCHEMA_CONTENT_MIXED_OR_ELEMENTS, /* Obsolete */
 		XML_SCHEMA_CONTENT_BASIC,
 		XML_SCHEMA_CONTENT_ANY
-	};
+	}
 
 	public struct xmlSchemaVal;
 	typealias xmlSchemaValPtr = xmlSchemaVal*;
@@ -146,7 +146,7 @@ extension libxml2
 	{
 		xmlSchemaAnnot* next;
 		xmlNodePtr content; /* the annotation */
-	};
+	}
 
 	/**
 	 * XML_SCHEMAS_ANYATTR_SKIP:
@@ -263,7 +263,7 @@ extension libxml2
 		xmlChar* refPrefix; /* Deprecated; not used */
 		xmlSchemaValPtr defVal; /* The compiled value constraint */
 		xmlSchemaAttributePtr refDecl; /* Deprecated; not used */
-	};
+	}
 
 	/**
 	 * xmlSchemaAttributeLink:
@@ -277,7 +277,7 @@ extension libxml2
 	{
 		xmlSchemaAttributeLink* next; /* the next attribute link ... */
 		xmlSchemaAttribute* attr; /* the linked attribute */
-	};
+	}
 
 	/**
 	 * XML_SCHEMAS_WILDCARD_COMPLETE:
@@ -297,7 +297,7 @@ extension libxml2
 	{
 		xmlSchemaWildcardNs* next; /* the next constraint link ... */
 		xmlChar* value; /* the value */
-	};
+	}
 
 	/**
 	 * xmlSchemaWildcard.
@@ -319,7 +319,7 @@ extension libxml2
 		xmlSchemaWildcardNsPtr nsSet; /* The list of allowed namespaces */
 		xmlSchemaWildcardNsPtr negNsSet; /* The negated namespace */
 		c_int flags;
-	};
+	}
 
 	/**
 	 * XML_SCHEMAS_ATTRGROUP_WILDCARD_BUILDED:
@@ -380,7 +380,7 @@ extension libxml2
 		xmlSchemaAttributeGroupPtr refItem; /* Deprecated; not used */
 		xmlChar* targetNamespace;
 		void* attrUses;
-	};
+	}
 
 	/**
 	 * xmlSchemaTypeLink:
@@ -394,7 +394,7 @@ extension libxml2
 	{
 		xmlSchemaTypeLink* next; /* the next type link ... */
 		xmlSchemaTypePtr type; /* the linked type */
-	};
+	}
 
 	/**
 	 * xmlSchemaFacetLink:
@@ -407,7 +407,7 @@ extension libxml2
 	{
 		xmlSchemaFacetLink* next; /* the next facet link ... */
 		xmlSchemaFacetPtr facet; /* the linked facet */
-	};
+	}
 
 	/**
 	 * XML_SCHEMAS_TYPE_MIXED:
@@ -643,7 +643,7 @@ extension libxml2
 		xmlRegexpPtr contModel; /* Holds the automaton of the content model */
 		xmlChar* targetNamespace;
 		void* attrUses;
-	};
+	}
 
 	/*
 	 * xmlSchemaElement:
@@ -804,7 +804,7 @@ extension libxml2
 		xmlChar* refPrefix; /* Deprecated; not used */
 		xmlSchemaValPtr defVal; /* The compiled value constraint. */
 		void* idcs; /* The identity-constraint defs */
-	};
+	}
 
 	/*
 	 * XML_SCHEMAS_FACET_UNKNOWN:
@@ -845,7 +845,7 @@ extension libxml2
 		c_int whitespace;
 		xmlSchemaValPtr val; /* The compiled value */
 		xmlRegexpPtr    regexp; /* The regex for patterns */
-	};
+	}
 
 	/**
 	 * A notation definition.
@@ -860,7 +860,7 @@ extension libxml2
 		xmlSchemaAnnotPtr annot;
 		xmlChar* identifier;
 		xmlChar* targetNamespace;
-	};
+	}
 
 	/*
 	* TODO: Actually all those flags used for the schema should sit
@@ -964,7 +964,7 @@ extension libxml2
 		c_int counter; /* used to give anonymous components unique names */
 		xmlHashTablePtr idcDef; /* All identity-constraint defs. */
 		void* volatiles; /* Obsolete */
-	};
+	}
 
 	[CLink] public static extern void         xmlSchemaFreeType        (xmlSchemaTypePtr type);
 	[CLink] public static extern void         xmlSchemaFreeWildcard(xmlSchemaWildcardPtr wildcard);
